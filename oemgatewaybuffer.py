@@ -144,7 +144,7 @@ class OemGatewayEmoncmsBuffer(OemGatewayBuffer):
         # 'http://domain.tld/emoncms/input/bulk.json?apikey=
         # 12345&data=[[-10,10,1806],[-5,10,1806],[0,10,1806]]'
         url_string = self._settings['protocol'] + self._settings['domain'] + \
-                     self._settings['path'] + "/input/bulk.json?apikey=" + \
+                     self._settings['path'] + "/input/bulk_json?apikey=" + \
                      self._settings['apikey'] + "&data=" + data_string
         self._log.debug("URL string: " + url_string)
 

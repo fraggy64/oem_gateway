@@ -111,7 +111,7 @@ class OemGatewayEmoncmsInterface(OemGatewayInterface):
             result = urllib2.urlopen(self._local_protocol +
                                      self._local_domain +
                                      self._local_path +
-                                     "/time/local.json")
+                                     "/time/local_json")
         
         except Exception:
             import traceback
@@ -155,7 +155,7 @@ class OemGatewayEmoncmsInterface(OemGatewayInterface):
             result = urllib2.urlopen(self._local_protocol +
                                      self._local_domain +
                                      self._local_path +
-                                     "/raspberrypi/get.json")
+                                     "/raspberrypi/get_json")
             result = result.readline()
             # result is of the form
             # {"userid":"1","sgroup":"210",...,"remoteprotocol":"http:\\/\\/"}
@@ -231,7 +231,7 @@ class OemGatewayEmoncmsInterface(OemGatewayInterface):
             result = urllib2.urlopen(self._local_protocol +
                                      self._local_domain +
                                      self._local_path +
-                                     "/raspberrypi/setrunning.json") 
+                                     "/raspberrypi/setrunning_json") 
         except Exception:
             import traceback
             self._log.warning(
